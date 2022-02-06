@@ -3,18 +3,19 @@
 //  MediQuoMobileTestApp
 //
 //  Created by Alvaro Orti Moreno on 2/2/22.
+//  Copyright © 2022 Alvaro Orti Moreno. All rights reserved.
 //
 
 import Foundation
 import Alamofire
 
 enum NetworkClientError: Error {
-    case invalidUrl
+    case invalidURL
     case `default`
 
     var localizedDescription: String {
         switch self {
-        case .invalidUrl:
+        case .invalidURL:
             return "Invalid url"
         case .default:
             return "Cannot receive data"
@@ -22,20 +23,21 @@ enum NetworkClientError: Error {
     }
 }
 
+typealias RequestResponse = Result<Data,NetworkClientError>
+
 protocol NetworkClientProtocol: AnyObject {
-    func request<T:Codable>(urlRequest: URLRequest, completion: @escaping (Result<T,NetworkClientError>) -> Void)
+    func request(urlRequest: URLRequest, completion: @escaping (RequestResponse) -> Void)
 }
 
 final class NetworkClient: NetworkClientProtocol {
 
     static let shared = NetworkClient()
-
     
+    private init() {}
 
-    func request<T: Codable>(urlRequest: URLRequest, completion: @escaping (Result<T, NetworkClientError>) -> Void) {
-        AF.request(urlRequest).response { response in
-            print(response)
-        }.validate(statusCode: 200..<300)
+    func request(urlRequest: URLRequest, completion: @escaping (RequestResponse) -> Void) {
+        AF.request(urlRequest)
+            .validate(statusCode: 200..<300)
             .response { response in
                 self.parseJSONResponse(response: response, completion: completion)
             }
@@ -43,7 +45,7 @@ final class NetworkClient: NetworkClientProtocol {
 }
 
 extension NetworkClient {
-    private func parseJSONResponse<T: Codable>(response: AFDataResponse<Data?>, completion: @escaping (Result<T, NetworkClientError>) -> Void) {
+    private func parseJSONResponse(response: AFDataResponse<Data?>, completion: @escaping (RequestResponse) -> Void) {
         switch response.result {
         case .success(let data):
             guard let data = data else {
@@ -51,17 +53,7 @@ extension NetworkClient {
                 return
             }
 
-            do {
-                let decoder = JSONDecoder()
-                let decoded = try decoder.decode(T.self, from: data)
-                DispatchQueue.main.async {
-                    completion(.success(decoded))
-                }
-            }
-            catch {
-                print("Error: \(error.localizedDescription)")
-                completion(.failure(.default))
-            }
+            completion(.success(data))
 
         case .failure:
             completion(.failure(.default))

@@ -3,6 +3,7 @@
 //  MediQuoMobileTestApp
 //
 //  Created by Alvaro Orti Moreno on 2/2/22.
+//  Copyright © 2022 Alvaro Orti Moreno. All rights reserved.
 //
 
 import UIKit
