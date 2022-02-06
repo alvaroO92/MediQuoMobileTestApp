@@ -5,3 +5,17 @@
   Created by Alvaro Orti Moreno on 2/2/22.
   
 */
+
+"error" = "Error";
+
+"characters" = "Characters";
+"search" = "Search...";
+"noResults" = "Cannot found any results";
+
+"name" = "Name";
+"birthday" = "Birthday";
+"occupation" = "Occupation";
+"status" = "Status";
+"appearance" = "Seasons where it appears";
+"portrayed" = "Portrayed";
+"quotes" = "Quotes";

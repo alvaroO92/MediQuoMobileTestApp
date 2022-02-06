@@ -5,3 +5,17 @@
   Created by Alvaro Orti Moreno on 2/2/22.
   
 */
+
+"error" = "Error";
+
+"characters" = "Personajes";
+"search" = "Buscar...";
+"noResults" = "No se han encontrado resultados";
+
+"name" = "Nombre";
+"birthday" = "Fecha de nacimiento";
+"occupation" = "Ocupación";
+"status" = "Estado";
+"appearance" = "Temporadas donde aparece";
+"portrayed" = "Interpretado por";
+"quotes" = "Frases";
