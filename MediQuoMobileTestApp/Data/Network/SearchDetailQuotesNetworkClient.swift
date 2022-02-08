@@ -3,6 +3,7 @@
 //  MediQuoMobileTestApp
 //
 //  Created by Alvaro Orti Moreno on 6/2/22.
+//  Copyright © 2022 Alvaro Orti Moreno. All rights reserved.
 //
 
 import Foundation
@@ -39,7 +40,7 @@ extension SearchDetailQuotesNetworkClient: SearchDetailQuotesNetworkClientProtoc
     func quotes(completion: @escaping (Result<[QuoteDTO], NetworkClientError>) -> Void) {
         
         guard let urlRequest = try? asURLRequest() else {
-            completion(.failure(.invalidURL))
+            completion(.failure(.generic))
             return
         }
 
@@ -51,7 +52,7 @@ extension SearchDetailQuotesNetworkClient: SearchDetailQuotesNetworkClientProtoc
                     let decoded = try decoder.decode([QuoteDTO].self, from: data)
                     completion(.success(decoded))
                 } catch {
-                    completion(.failure(.default))
+                    completion(.failure(.generic))
                 }
             case .failure(let error):
                 completion(.failure(error))

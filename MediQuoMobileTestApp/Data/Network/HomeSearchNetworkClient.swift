@@ -51,7 +51,7 @@ extension HomeSearchNetworkClient: HomeSearchNetworkClientProtocol {
     func getCharacters(completion: @escaping (Result<[CharacterDTO],NetworkClientError>) -> Void) {
         
         guard let urlRequest = try? asURLRequest() else {
-            completion(.failure(.invalidURL))
+            completion(.failure(.generic))
             return
         }
 
@@ -63,7 +63,7 @@ extension HomeSearchNetworkClient: HomeSearchNetworkClientProtocol {
                     let decoded = try decoder.decode([CharacterDTO].self, from: data)
                     completion(.success(decoded))
                 } catch {
-                    completion(.failure(.default))
+                    completion(.failure(.generic))
                 }
             case .failure(let error):
                 completion(.failure(error))

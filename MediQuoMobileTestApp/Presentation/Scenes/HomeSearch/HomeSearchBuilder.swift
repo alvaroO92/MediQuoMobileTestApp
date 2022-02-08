@@ -12,7 +12,8 @@ final class HomeSearchBuilder: Builder {
 
     func build() -> UIViewController {
         let networkClient = HomeSearchNetworkClient(category: .BetterCallSaul)
-        let repository = HomeSearchRepository(networkClient: networkClient)
+        let database = RealmManager()
+        let repository = HomeSearchRepository(networkClient: networkClient, realmDataBase: database)
         let useCase = HomeSearchUseCase(repositoy: repository)
         let router = HomeSearchRouter()
         let presenter = HomeSearchPresenter(useCase: useCase, router: router)
