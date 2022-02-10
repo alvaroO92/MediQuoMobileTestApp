@@ -37,7 +37,8 @@ final class SearchDetailPresenter {
     }
 
     private func getQuotes() {
-        useCase.quotes { response in
+        useCase.quotes { [weak self] response in
+            guard let self = self else { return }
             switch response {
             case .success(let data):
                 self.quotes = data.map { $0.message }

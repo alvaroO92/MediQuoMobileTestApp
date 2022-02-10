@@ -39,7 +39,8 @@ final class HomeSearchPresenter {
     }
 
     private func loadData(by category: SearchCategory) {
-        useCase.getCharacters(category: category) { response in
+        useCase.getCharacters(category: category) { [weak self] response in
+            guard let self = self else { return }
             switch response {
             case .success(let characters):
                 self.characters = characters

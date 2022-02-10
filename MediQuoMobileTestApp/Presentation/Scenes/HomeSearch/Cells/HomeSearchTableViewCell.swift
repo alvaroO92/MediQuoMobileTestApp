@@ -21,17 +21,18 @@ enum HomeSearchTableViewCellUseCase {
 
 class HomeSearchTableViewCell: UITableViewCell {
     
-    lazy var contentStackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [characterImageView, textsStackView])
-        stackView.axis = .horizontal
-        stackView.spacing = 4.0
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        return stackView
+    lazy var containerView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
     }()
     
     let characterImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.clipsToBounds = true
+        NSLayoutConstraint.activate([
+            imageView.heightAnchor.constraint(equalToConstant: 60),
+            imageView.widthAnchor.constraint(equalToConstant: 60)
+        ])
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
@@ -58,24 +59,33 @@ class HomeSearchTableViewCell: UITableViewCell {
         label.font = UIFont.italicSystemFont(ofSize: 14)
         return label
     }()
+
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.selectionStyle = .none
-        
-        contentView.addSubview(characterImageView)
+
+        contentView.addSubview(containerView)
         NSLayoutConstraint.activate([
-            characterImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
-            characterImageView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
-            characterImageView.heightAnchor.constraint(equalToConstant: 60),
-            characterImageView.widthAnchor.constraint(equalToConstant: 60)
+            containerView.topAnchor.constraint(equalTo: contentView.topAnchor),
+            containerView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            containerView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            containerView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            containerView.heightAnchor.constraint(greaterThanOrEqualToConstant: 100),
+
         ])
         
-        contentView.addSubview(textsStackView)
+        containerView.addSubview(characterImageView)
         NSLayoutConstraint.activate([
-            textsStackView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+            characterImageView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 16),
+            characterImageView.centerYAnchor.constraint(equalTo: containerView.centerYAnchor)
+        ])
+        
+        containerView.addSubview(textsStackView)
+        NSLayoutConstraint.activate([
+            textsStackView.centerYAnchor.constraint(equalTo: containerView.centerYAnchor),
             textsStackView.leadingAnchor.constraint(equalTo: characterImageView.trailingAnchor, constant: 16),
-            textsStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 16)
+            textsStackView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: 16)
         ])
     }
     
@@ -91,7 +101,9 @@ class HomeSearchTableViewCell: UITableViewCell {
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        characterImageView.layer.cornerRadius = characterImageView.frame.height/2
+        characterImageView.layer.cornerRadius = 30
+        characterImageView.layer.masksToBounds = true
+        characterImageView.clipsToBounds = true
     }
     
     func display(with model: HomeSearchTableViewCellUseCase.Model) {

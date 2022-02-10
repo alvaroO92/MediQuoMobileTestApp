@@ -24,20 +24,20 @@ protocol RealmManagerProtocol: AnyObject {
 }
 
 final class RealmManager: RealmManagerProtocol {
-    fileprivate var realm: Realm? {
-           do {
-               return try Realm(configuration: addConfiguration())
-           } catch let error {
-               let nsError: NSError = error as NSError
-               if nsError.code == 10 {
-                   guard let defaultPath: URL = Realm.Configuration.defaultConfiguration.fileURL else { return nil }
-                   try? FileManager.default.removeItem(at: defaultPath)
-                   return self.realm
-               }
-               print("Default realm init failed: ", error)
-           }
-           return nil
-       }
+    fileprivate var realm: Realm?
+
+    init() {
+        do {
+            realm = try Realm(configuration: addConfiguration())
+        } catch let error {
+            let nsError: NSError = error as NSError
+            if nsError.code == 10 {
+                guard let defaultPath: URL = Realm.Configuration.defaultConfiguration.fileURL else { return }
+                try? FileManager.default.removeItem(at: defaultPath)
+            }
+            print("Default realm init failed: ", error)
+        }
+    }
     
     func object<T: Object>() -> T? {
         let key: AnyObject = 0 as AnyObject

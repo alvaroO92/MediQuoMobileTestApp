@@ -14,7 +14,7 @@ final class HomeSearchBuilder: Builder {
         let networkClient = HomeSearchNetworkClient(category: .BetterCallSaul)
         let database = RealmManager()
         let repository = HomeSearchRepository(networkClient: networkClient, realmDataBase: database)
-        let useCase = HomeSearchUseCase(repositoy: repository)
+        let useCase = HomeSearchUseCase(repository: repository)
         let router = HomeSearchRouter()
         let presenter = HomeSearchPresenter(useCase: useCase, router: router)
         let viewController = HomeSearchTableViewController(presenter: presenter)

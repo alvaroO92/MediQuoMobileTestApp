@@ -7,7 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3850FAA227B4686C004135C5 /* UIApplication+TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3850FAA127B4686C004135C5 /* UIApplication+TopViewController.swift */; };
+		3850FAA927B52F6E004135C5 /* HomeSearchPresenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3850FAA827B52F6E004135C5 /* HomeSearchPresenterMock.swift */; };
+		3850FAAD27B5320E004135C5 /* HomeSearchTableViewControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3850FAAC27B5320E004135C5 /* HomeSearchTableViewControllerMock.swift */; };
+		3850FAAF27B5337C004135C5 /* HomeSearchBuilderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3850FAAE27B5337C004135C5 /* HomeSearchBuilderMock.swift */; };
+		3850FAB327B5341B004135C5 /* HomeSearchRouterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3850FAB227B5341B004135C5 /* HomeSearchRouterMock.swift */; };
+		3850FAB727B53486004135C5 /* SearchDetailBuilderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3850FAB627B53486004135C5 /* SearchDetailBuilderMock.swift */; };
+		3850FAB927B53492004135C5 /* SearchDetailRouterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3850FAB827B53492004135C5 /* SearchDetailRouterMock.swift */; };
+		3850FABB27B534A2004135C5 /* SearchDetailPresenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3850FABA27B534A2004135C5 /* SearchDetailPresenterMock.swift */; };
+		3850FABD27B534B0004135C5 /* SearchDetailTableViewControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3850FABC27B534B0004135C5 /* SearchDetailTableViewControllerMock.swift */; };
+		3850FABF27B5376E004135C5 /* HomeSearchBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3850FABE27B5376E004135C5 /* HomeSearchBuilderTests.swift */; };
+		3850FAC127B5377B004135C5 /* HomeSearchRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3850FAC027B5377B004135C5 /* HomeSearchRouterTests.swift */; };
+		3850FAC327B5378A004135C5 /* HomeSearchPresenterMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3850FAC227B5378A004135C5 /* HomeSearchPresenterMocks.swift */; };
+		3850FAC527B53799004135C5 /* HomeSearchTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3850FAC427B53799004135C5 /* HomeSearchTableViewControllerTests.swift */; };
+		3850FAC727B537AE004135C5 /* SearchDetailBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3850FAC627B537AE004135C5 /* SearchDetailBuilderTests.swift */; };
+		3850FAC927B537BA004135C5 /* SearchDetailRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3850FAC827B537BA004135C5 /* SearchDetailRouterTests.swift */; };
+		3850FACB27B537CD004135C5 /* SearchDetailPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3850FACA27B537CD004135C5 /* SearchDetailPresenterTests.swift */; };
+		3850FACD27B537DB004135C5 /* SearchDetailTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3850FACC27B537DB004135C5 /* SearchDetailTableViewControllerTests.swift */; };
+		3850FAD227B53A3D004135C5 /* HomeSearchNetworkClientMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3850FAD127B53A3D004135C5 /* HomeSearchNetworkClientMock.swift */; };
+		3850FAD427B53A94004135C5 /* SearchDetailQuotesNetworkClientMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3850FAD327B53A94004135C5 /* SearchDetailQuotesNetworkClientMock.swift */; };
+		3850FAD627B53D65004135C5 /* Quotes.json in Resources */ = {isa = PBXBuildFile; fileRef = 3850FAD527B53D65004135C5 /* Quotes.json */; };
+		3850FAD927B53E13004135C5 /* HomeSearchNetworkClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3850FAD827B53E13004135C5 /* HomeSearchNetworkClientTests.swift */; };
+		3850FADB27B53E2C004135C5 /* SearchDetailQuotesNetworkClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3850FADA27B53E2C004135C5 /* SearchDetailQuotesNetworkClientTests.swift */; };
+		3850FADE27B53E9A004135C5 /* RealmManagerProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3850FADD27B53E9A004135C5 /* RealmManagerProtocolMock.swift */; };
+		3850FAE027B5405B004135C5 /* RealmManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3850FADF27B5405B004135C5 /* RealmManagerTests.swift */; };
+		3850FAE327B542A9004135C5 /* SearchDetailQuotesRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3850FAE227B542A9004135C5 /* SearchDetailQuotesRepositoryTests.swift */; };
+		3850FAE527B542C1004135C5 /* HomeSearchRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3850FAE427B542C1004135C5 /* HomeSearchRepositoryTests.swift */; };
+		3850FAEC27B54A09004135C5 /* HomeSearchRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3850FAEB27B54A09004135C5 /* HomeSearchRepositoryMock.swift */; };
+		3850FAEE27B54A50004135C5 /* SearchDetailQuotesRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3850FAED27B54A50004135C5 /* SearchDetailQuotesRepositoryMock.swift */; };
+		3850FAF027B54AAF004135C5 /* HomeSearchUseCaseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3850FAEF27B54AAF004135C5 /* HomeSearchUseCaseMock.swift */; };
+		3850FAF227B54ABE004135C5 /* SearchDetailQuotesUseCaseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3850FAF127B54ABE004135C5 /* SearchDetailQuotesUseCaseMock.swift */; };
+		3850FAF427B54C2D004135C5 /* SearchDetailQuotesUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3850FAF327B54C2C004135C5 /* SearchDetailQuotesUseCaseTests.swift */; };
+		3850FAF627B54C40004135C5 /* HomeSearchUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3850FAF527B54C40004135C5 /* HomeSearchUseCaseTests.swift */; };
 		3856E43A27AB254900EF954F /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3856E43927AB254900EF954F /* NetworkConstants.swift */; };
 		3856E43D27AB283200EF954F /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3856E43C27AB283200EF954F /* Alamofire */; };
 		3856E44327AB2B7200EF954F /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3856E44227AB2B7200EF954F /* Character.swift */; };
@@ -39,7 +69,6 @@
 		38D6734D27AF280F00E65315 /* SearchDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D6734C27AF280F00E65315 /* SearchDetailRouter.swift */; };
 		38D6734F27AF281D00E65315 /* SearchDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D6734E27AF281D00E65315 /* SearchDetailPresenter.swift */; };
 		38D6735127AF28AD00E65315 /* SearchDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D6735027AF28AD00E65315 /* SearchDetailTableViewController.swift */; };
-		38D6735327AFB0F200E65315 /* HomeSearchFilterNetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D6735227AFB0F200E65315 /* HomeSearchFilterNetworkClient.swift */; };
 		38D6735527AFB18500E65315 /* SearchDetailQuotesNetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D6735427AFB18500E65315 /* SearchDetailQuotesNetworkClient.swift */; };
 		38D6735727AFB3AB00E65315 /* QuoteDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D6735627AFB3AB00E65315 /* QuoteDTO.swift */; };
 		38D6735927AFB41900E65315 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D6735827AFB41900E65315 /* Quote.swift */; };
@@ -77,7 +106,37 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3850FAA127B4686C004135C5 /* UIApplication+TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+TopViewController.swift"; sourceTree = "<group>"; };
+		3850FAA827B52F6E004135C5 /* HomeSearchPresenterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSearchPresenterMock.swift; sourceTree = "<group>"; };
+		3850FAAC27B5320E004135C5 /* HomeSearchTableViewControllerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSearchTableViewControllerMock.swift; sourceTree = "<group>"; };
+		3850FAAE27B5337C004135C5 /* HomeSearchBuilderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSearchBuilderMock.swift; sourceTree = "<group>"; };
+		3850FAB227B5341B004135C5 /* HomeSearchRouterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSearchRouterMock.swift; sourceTree = "<group>"; };
+		3850FAB627B53486004135C5 /* SearchDetailBuilderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailBuilderMock.swift; sourceTree = "<group>"; };
+		3850FAB827B53492004135C5 /* SearchDetailRouterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailRouterMock.swift; sourceTree = "<group>"; };
+		3850FABA27B534A2004135C5 /* SearchDetailPresenterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailPresenterMock.swift; sourceTree = "<group>"; };
+		3850FABC27B534B0004135C5 /* SearchDetailTableViewControllerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailTableViewControllerMock.swift; sourceTree = "<group>"; };
+		3850FABE27B5376E004135C5 /* HomeSearchBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSearchBuilderTests.swift; sourceTree = "<group>"; };
+		3850FAC027B5377B004135C5 /* HomeSearchRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSearchRouterTests.swift; sourceTree = "<group>"; };
+		3850FAC227B5378A004135C5 /* HomeSearchPresenterMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSearchPresenterMocks.swift; sourceTree = "<group>"; };
+		3850FAC427B53799004135C5 /* HomeSearchTableViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSearchTableViewControllerTests.swift; sourceTree = "<group>"; };
+		3850FAC627B537AE004135C5 /* SearchDetailBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailBuilderTests.swift; sourceTree = "<group>"; };
+		3850FAC827B537BA004135C5 /* SearchDetailRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailRouterTests.swift; sourceTree = "<group>"; };
+		3850FACA27B537CD004135C5 /* SearchDetailPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailPresenterTests.swift; sourceTree = "<group>"; };
+		3850FACC27B537DB004135C5 /* SearchDetailTableViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailTableViewControllerTests.swift; sourceTree = "<group>"; };
+		3850FAD127B53A3D004135C5 /* HomeSearchNetworkClientMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSearchNetworkClientMock.swift; sourceTree = "<group>"; };
+		3850FAD327B53A94004135C5 /* SearchDetailQuotesNetworkClientMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailQuotesNetworkClientMock.swift; sourceTree = "<group>"; };
+		3850FAD527B53D65004135C5 /* Quotes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Quotes.json; sourceTree = "<group>"; };
+		3850FAD827B53E13004135C5 /* HomeSearchNetworkClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSearchNetworkClientTests.swift; sourceTree = "<group>"; };
+		3850FADA27B53E2C004135C5 /* SearchDetailQuotesNetworkClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailQuotesNetworkClientTests.swift; sourceTree = "<group>"; };
+		3850FADD27B53E9A004135C5 /* RealmManagerProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManagerProtocolMock.swift; sourceTree = "<group>"; };
+		3850FADF27B5405B004135C5 /* RealmManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManagerTests.swift; sourceTree = "<group>"; };
+		3850FAE227B542A9004135C5 /* SearchDetailQuotesRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailQuotesRepositoryTests.swift; sourceTree = "<group>"; };
+		3850FAE427B542C1004135C5 /* HomeSearchRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSearchRepositoryTests.swift; sourceTree = "<group>"; };
+		3850FAEB27B54A09004135C5 /* HomeSearchRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSearchRepositoryMock.swift; sourceTree = "<group>"; };
+		3850FAED27B54A50004135C5 /* SearchDetailQuotesRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailQuotesRepositoryMock.swift; sourceTree = "<group>"; };
+		3850FAEF27B54AAF004135C5 /* HomeSearchUseCaseMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSearchUseCaseMock.swift; sourceTree = "<group>"; };
+		3850FAF127B54ABE004135C5 /* SearchDetailQuotesUseCaseMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailQuotesUseCaseMock.swift; sourceTree = "<group>"; };
+		3850FAF327B54C2C004135C5 /* SearchDetailQuotesUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailQuotesUseCaseTests.swift; sourceTree = "<group>"; };
+		3850FAF527B54C40004135C5 /* HomeSearchUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSearchUseCaseTests.swift; sourceTree = "<group>"; };
 		3856E43927AB254900EF954F /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
 		3856E44227AB2B7200EF954F /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		3856E44427AB2F8A00EF954F /* CharacterDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDTO.swift; sourceTree = "<group>"; };
@@ -105,7 +164,6 @@
 		38D6734C27AF280F00E65315 /* SearchDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailRouter.swift; sourceTree = "<group>"; };
 		38D6734E27AF281D00E65315 /* SearchDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailPresenter.swift; sourceTree = "<group>"; };
 		38D6735027AF28AD00E65315 /* SearchDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailTableViewController.swift; sourceTree = "<group>"; };
-		38D6735227AFB0F200E65315 /* HomeSearchFilterNetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSearchFilterNetworkClient.swift; sourceTree = "<group>"; };
 		38D6735427AFB18500E65315 /* SearchDetailQuotesNetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailQuotesNetworkClient.swift; sourceTree = "<group>"; };
 		38D6735627AFB3AB00E65315 /* QuoteDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteDTO.swift; sourceTree = "<group>"; };
 		38D6735827AFB41900E65315 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
@@ -160,6 +218,137 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3850FAA327B52EE4004135C5 /* ScenesTests */ = {
+			isa = PBXGroup;
+			children = (
+				3850FAA427B52EF0004135C5 /* HomeSearchTests */,
+				3850FAB427B53467004135C5 /* SearchDetailTests */,
+			);
+			path = ScenesTests;
+			sourceTree = "<group>";
+		};
+		3850FAA427B52EF0004135C5 /* HomeSearchTests */ = {
+			isa = PBXGroup;
+			children = (
+				3850FAA527B52F02004135C5 /* Mocks */,
+				3850FABE27B5376E004135C5 /* HomeSearchBuilderTests.swift */,
+				3850FAC027B5377B004135C5 /* HomeSearchRouterTests.swift */,
+				3850FAC227B5378A004135C5 /* HomeSearchPresenterMocks.swift */,
+				3850FAC427B53799004135C5 /* HomeSearchTableViewControllerTests.swift */,
+			);
+			path = HomeSearchTests;
+			sourceTree = "<group>";
+		};
+		3850FAA527B52F02004135C5 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				3850FAAE27B5337C004135C5 /* HomeSearchBuilderMock.swift */,
+				3850FAB227B5341B004135C5 /* HomeSearchRouterMock.swift */,
+				3850FAA827B52F6E004135C5 /* HomeSearchPresenterMock.swift */,
+				3850FAAC27B5320E004135C5 /* HomeSearchTableViewControllerMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		3850FAB427B53467004135C5 /* SearchDetailTests */ = {
+			isa = PBXGroup;
+			children = (
+				3850FAB527B53471004135C5 /* Mocks */,
+				3850FAC627B537AE004135C5 /* SearchDetailBuilderTests.swift */,
+				3850FAC827B537BA004135C5 /* SearchDetailRouterTests.swift */,
+				3850FACA27B537CD004135C5 /* SearchDetailPresenterTests.swift */,
+				3850FACC27B537DB004135C5 /* SearchDetailTableViewControllerTests.swift */,
+			);
+			path = SearchDetailTests;
+			sourceTree = "<group>";
+		};
+		3850FAB527B53471004135C5 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				3850FAB627B53486004135C5 /* SearchDetailBuilderMock.swift */,
+				3850FAB827B53492004135C5 /* SearchDetailRouterMock.swift */,
+				3850FABA27B534A2004135C5 /* SearchDetailPresenterMock.swift */,
+				3850FABC27B534B0004135C5 /* SearchDetailTableViewControllerMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		3850FACE27B539EC004135C5 /* DataTests */ = {
+			isa = PBXGroup;
+			children = (
+				3850FADC27B53E75004135C5 /* RealmTests */,
+				3850FACF27B53A1C004135C5 /* NetworkClientTests */,
+				3850FAD027B53A29004135C5 /* RepositoriesTests */,
+			);
+			path = DataTests;
+			sourceTree = "<group>";
+		};
+		3850FACF27B53A1C004135C5 /* NetworkClientTests */ = {
+			isa = PBXGroup;
+			children = (
+				3850FAD727B53DE6004135C5 /* Mocks */,
+				3850FAD827B53E13004135C5 /* HomeSearchNetworkClientTests.swift */,
+				3850FADA27B53E2C004135C5 /* SearchDetailQuotesNetworkClientTests.swift */,
+			);
+			path = NetworkClientTests;
+			sourceTree = "<group>";
+		};
+		3850FAD027B53A29004135C5 /* RepositoriesTests */ = {
+			isa = PBXGroup;
+			children = (
+				3850FAEA27B549F4004135C5 /* Mocks */,
+				3850FAE427B542C1004135C5 /* HomeSearchRepositoryTests.swift */,
+				3850FAE227B542A9004135C5 /* SearchDetailQuotesRepositoryTests.swift */,
+			);
+			path = RepositoriesTests;
+			sourceTree = "<group>";
+		};
+		3850FAD727B53DE6004135C5 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				3850FAD127B53A3D004135C5 /* HomeSearchNetworkClientMock.swift */,
+				3850FAD327B53A94004135C5 /* SearchDetailQuotesNetworkClientMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		3850FADC27B53E75004135C5 /* RealmTests */ = {
+			isa = PBXGroup;
+			children = (
+				3850FADD27B53E9A004135C5 /* RealmManagerProtocolMock.swift */,
+				3850FADF27B5405B004135C5 /* RealmManagerTests.swift */,
+			);
+			path = RealmTests;
+			sourceTree = "<group>";
+		};
+		3850FAE827B5497C004135C5 /* DomainTests */ = {
+			isa = PBXGroup;
+			children = (
+				3850FAE927B549B5004135C5 /* Mocks */,
+				3850FAF527B54C40004135C5 /* HomeSearchUseCaseTests.swift */,
+				3850FAF327B54C2C004135C5 /* SearchDetailQuotesUseCaseTests.swift */,
+			);
+			path = DomainTests;
+			sourceTree = "<group>";
+		};
+		3850FAE927B549B5004135C5 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				3850FAEF27B54AAF004135C5 /* HomeSearchUseCaseMock.swift */,
+				3850FAF127B54ABE004135C5 /* SearchDetailQuotesUseCaseMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		3850FAEA27B549F4004135C5 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				3850FAEB27B54A09004135C5 /* HomeSearchRepositoryMock.swift */,
+				3850FAED27B54A50004135C5 /* SearchDetailQuotesRepositoryMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		3856E44027AB2ABB00EF954F /* DTO */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,10 +390,10 @@
 			isa = PBXGroup;
 			children = (
 				38D6732D27AED0A900E65315 /* Cells */,
-				3856E46127ADBEDF00EF954F /* HomeSearchTableViewController.swift */,
-				38D6734527AF1B0D00E65315 /* HomeSearchPresenter.swift */,
-				3856E45D27ADBA7000EF954F /* HomeSearchRouter.swift */,
 				3856E45F27ADBA7C00EF954F /* HomeSearchBuilder.swift */,
+				3856E45D27ADBA7000EF954F /* HomeSearchRouter.swift */,
+				38D6734527AF1B0D00E65315 /* HomeSearchPresenter.swift */,
+				3856E46127ADBEDF00EF954F /* HomeSearchTableViewController.swift */,
 			);
 			path = HomeSearch;
 			sourceTree = "<group>";
@@ -229,6 +418,7 @@
 		38D6732427AEBF4B00E65315 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
+				3850FAD527B53D65004135C5 /* Quotes.json */,
 				38D6732527AEBF8400E65315 /* BetterCallSaulCharacters.json */,
 				38D6732727AEBFCF00E65315 /* BreakingBadCharacters.json */,
 			);
@@ -259,7 +449,6 @@
 				38D6733B27AED51F00E65315 /* String+Localized.swift */,
 				38D6733D27AED69D00E65315 /* Operation+Empty.swift */,
 				38B7BCDC27B31CAC00A2FEDA /* Realm+Array.swift */,
-				3850FAA127B4686C004135C5 /* UIApplication+TopViewController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -286,10 +475,10 @@
 			children = (
 				38D6736527AFE46800E65315 /* Views */,
 				38D6736827AFEC1900E65315 /* Cells */,
-				38D6735027AF28AD00E65315 /* SearchDetailTableViewController.swift */,
-				38D6734E27AF281D00E65315 /* SearchDetailPresenter.swift */,
-				38D6734C27AF280F00E65315 /* SearchDetailRouter.swift */,
 				38D6734A27AF280000E65315 /* SearchDetailBuilder.swift */,
+				38D6734C27AF280F00E65315 /* SearchDetailRouter.swift */,
+				38D6734E27AF281D00E65315 /* SearchDetailPresenter.swift */,
+				38D6735027AF28AD00E65315 /* SearchDetailTableViewController.swift */,
 			);
 			path = SearchDetail;
 			sourceTree = "<group>";
@@ -347,6 +536,9 @@
 		8C217B8427AAE52B005E389F /* MediQuoMobileTestAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				3850FACE27B539EC004135C5 /* DataTests */,
+				3850FAE827B5497C004135C5 /* DomainTests */,
+				3850FAA327B52EE4004135C5 /* ScenesTests */,
 				8C217B8527AAE52B005E389F /* MediQuoMobileTestAppTests.swift */,
 			);
 			path = MediQuoMobileTestAppTests;
@@ -407,7 +599,6 @@
 			children = (
 				8C217BB827AAF97E005E389F /* Base */,
 				3856E44E27ADB31B00EF954F /* HomeSearchNetworkClient.swift */,
-				38D6735227AFB0F200E65315 /* HomeSearchFilterNetworkClient.swift */,
 				38D6735427AFB18500E65315 /* SearchDetailQuotesNetworkClient.swift */,
 			);
 			path = Network;
@@ -552,6 +743,7 @@
 				8C217B7B27AAE52A005E389F /* LaunchScreen.storyboard in Resources */,
 				8C217BA327AAE7F8005E389F /* Localizable.strings in Resources */,
 				38D6732827AEBFCF00E65315 /* BreakingBadCharacters.json in Resources */,
+				3850FAD627B53D65004135C5 /* Quotes.json in Resources */,
 				8C217B7827AAE52A005E389F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -578,7 +770,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				38D6736A27AFEC3E00E65315 /* SearchDetailTableViewCell.swift in Sources */,
-				38D6735327AFB0F200E65315 /* HomeSearchFilterNetworkClient.swift in Sources */,
 				8C217B6F27AAE527005E389F /* AppDelegate.swift in Sources */,
 				3856E44527AB2F8A00EF954F /* CharacterDTO.swift in Sources */,
 				38D6735B27AFB4CB00E65315 /* SearchDetailQuotesRepository.swift in Sources */,
@@ -606,7 +797,6 @@
 				38D6734F27AF281D00E65315 /* SearchDetailPresenter.swift in Sources */,
 				3856E45127ADB36600EF954F /* HomeSearchRepository.swift in Sources */,
 				38B7BCDD27B31CAC00A2FEDA /* Realm+Array.swift in Sources */,
-				3850FAA227B4686C004135C5 /* UIApplication+TopViewController.swift in Sources */,
 				38D6736727AFE47900E65315 /* HeaderDetailView.swift in Sources */,
 				38D6735927AFB41900E65315 /* Quote.swift in Sources */,
 				38D6735127AF28AD00E65315 /* SearchDetailTableViewController.swift in Sources */,
@@ -622,7 +812,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3850FAEC27B54A09004135C5 /* HomeSearchRepositoryMock.swift in Sources */,
+				3850FAD227B53A3D004135C5 /* HomeSearchNetworkClientMock.swift in Sources */,
+				3850FABF27B5376E004135C5 /* HomeSearchBuilderTests.swift in Sources */,
+				3850FAF627B54C40004135C5 /* HomeSearchUseCaseTests.swift in Sources */,
+				3850FADB27B53E2C004135C5 /* SearchDetailQuotesNetworkClientTests.swift in Sources */,
 				8C217B8627AAE52B005E389F /* MediQuoMobileTestAppTests.swift in Sources */,
+				3850FAB327B5341B004135C5 /* HomeSearchRouterMock.swift in Sources */,
+				3850FAD927B53E13004135C5 /* HomeSearchNetworkClientTests.swift in Sources */,
+				3850FAE527B542C1004135C5 /* HomeSearchRepositoryTests.swift in Sources */,
+				3850FAE027B5405B004135C5 /* RealmManagerTests.swift in Sources */,
+				3850FAE327B542A9004135C5 /* SearchDetailQuotesRepositoryTests.swift in Sources */,
+				3850FAC127B5377B004135C5 /* HomeSearchRouterTests.swift in Sources */,
+				3850FABD27B534B0004135C5 /* SearchDetailTableViewControllerMock.swift in Sources */,
+				3850FAC327B5378A004135C5 /* HomeSearchPresenterMocks.swift in Sources */,
+				3850FAB727B53486004135C5 /* SearchDetailBuilderMock.swift in Sources */,
+				3850FAA927B52F6E004135C5 /* HomeSearchPresenterMock.swift in Sources */,
+				3850FAF227B54ABE004135C5 /* SearchDetailQuotesUseCaseMock.swift in Sources */,
+				3850FAD427B53A94004135C5 /* SearchDetailQuotesNetworkClientMock.swift in Sources */,
+				3850FAF427B54C2D004135C5 /* SearchDetailQuotesUseCaseTests.swift in Sources */,
+				3850FAC727B537AE004135C5 /* SearchDetailBuilderTests.swift in Sources */,
+				3850FAB927B53492004135C5 /* SearchDetailRouterMock.swift in Sources */,
+				3850FACD27B537DB004135C5 /* SearchDetailTableViewControllerTests.swift in Sources */,
+				3850FAC527B53799004135C5 /* HomeSearchTableViewControllerTests.swift in Sources */,
+				3850FAF027B54AAF004135C5 /* HomeSearchUseCaseMock.swift in Sources */,
+				3850FAEE27B54A50004135C5 /* SearchDetailQuotesRepositoryMock.swift in Sources */,
+				3850FABB27B534A2004135C5 /* SearchDetailPresenterMock.swift in Sources */,
+				3850FAAF27B5337C004135C5 /* HomeSearchBuilderMock.swift in Sources */,
+				3850FAAD27B5320E004135C5 /* HomeSearchTableViewControllerMock.swift in Sources */,
+				3850FACB27B537CD004135C5 /* SearchDetailPresenterTests.swift in Sources */,
+				3850FAC927B537BA004135C5 /* SearchDetailRouterTests.swift in Sources */,
+				3850FADE27B53E9A004135C5 /* RealmManagerProtocolMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

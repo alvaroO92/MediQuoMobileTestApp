@@ -8,17 +8,11 @@
 
 import UIKit
 
-protocol SearchDetailRouterProtocol: AnyObject {
-    func popBack()
-}
+protocol SearchDetailRouterProtocol: AnyObject {}
 
 final class SearchDetailRouter {
     var viewController: UIViewController?
 }
 
-extension SearchDetailRouter: SearchDetailRouterProtocol {
-    func popBack() {
-        viewController?.navigationController?.dismiss(animated: true, completion: nil)
-    }
-}
+extension SearchDetailRouter: SearchDetailRouterProtocol {}
 
