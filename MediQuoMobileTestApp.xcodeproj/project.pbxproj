@@ -1020,6 +1020,7 @@
 				DEVELOPMENT_TEAM = NQG7EKNA4U;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MediQuoMobileTestApp/Resources/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MediQuoMobileTestApp;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -1047,6 +1048,7 @@
 				DEVELOPMENT_TEAM = NQG7EKNA4U;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MediQuoMobileTestApp/Resources/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MediQuoMobileTestApp;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
