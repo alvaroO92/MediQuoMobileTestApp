@@ -556,6 +556,7 @@
 		8C217B9E27AAE55E005E389F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				38D6732427AEBF4B00E65315 /* Mocks */,
 				8C217B7C27AAE52A005E389F /* Info.plist */,
 				8C217B7727AAE52A005E389F /* Assets.xcassets */,
 				8C217BA527AAE7F8005E389F /* Localizable.strings */,
@@ -578,7 +579,6 @@
 			children = (
 				3856E44027AB2ABB00EF954F /* DTO */,
 				38B7BCC927B18E0600A2FEDA /* Realm */,
-				38D6732427AEBF4B00E65315 /* Mocks */,
 				8C217BAB27AAE9BE005E389F /* Network */,
 				8C217BAC27AAE9C8005E389F /* Repositories */,
 			);
