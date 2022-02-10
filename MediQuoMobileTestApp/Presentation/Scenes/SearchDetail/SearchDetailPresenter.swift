@@ -9,9 +9,10 @@
 import Foundation
 
 protocol SearchDetailPresenterProtocol: AnyObject {
+    var categoryStringImage: String { get }
+
     func viewWillAppear()
     func headerModel() -> HeaderDetailViewModel
-    func getCategory() -> SearchCategory
     func numberOfSections() -> Int
     func numberOfRows(in section: Int) -> Int
     func modelForCell(at index: Int) -> String
@@ -59,9 +60,8 @@ extension SearchDetailPresenter: SearchDetailPresenterProtocol {
         HeaderDetailViewModel(characterImage: character.image)
     }
     
-
-    func getCategory() -> SearchCategory {
-        category
+    var categoryStringImage: String {
+        category == .BetterCallSaul ? "ic_bettercallsaul" : "ic_breakingbad"
     }
 
     func numberOfSections() -> Int {

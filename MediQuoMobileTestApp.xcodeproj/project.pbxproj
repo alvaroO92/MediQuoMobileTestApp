@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3850FAA227B4686C004135C5 /* UIApplication+TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3850FAA127B4686C004135C5 /* UIApplication+TopViewController.swift */; };
 		3856E43A27AB254900EF954F /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3856E43927AB254900EF954F /* NetworkConstants.swift */; };
 		3856E43D27AB283200EF954F /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3856E43C27AB283200EF954F /* Alamofire */; };
 		3856E44327AB2B7200EF954F /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3856E44227AB2B7200EF954F /* Character.swift */; };
@@ -27,11 +28,10 @@
 		38D6732627AEBF8400E65315 /* BetterCallSaulCharacters.json in Resources */ = {isa = PBXBuildFile; fileRef = 38D6732527AEBF8400E65315 /* BetterCallSaulCharacters.json */; };
 		38D6732827AEBFCF00E65315 /* BreakingBadCharacters.json in Resources */ = {isa = PBXBuildFile; fileRef = 38D6732727AEBFCF00E65315 /* BreakingBadCharacters.json */; };
 		38D6732F27AED0C200E65315 /* HomeSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D6732E27AED0C200E65315 /* HomeSearchTableViewCell.swift */; };
-		38D6733527AED2D300E65315 /* UIView+fill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D6733427AED2D300E65315 /* UIView+fill.swift */; };
 		38D6733827AED43900E65315 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 38D6733727AED43900E65315 /* SDWebImage */; };
 		38D6733A27AED47000E65315 /* UIImageView+load.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D6733927AED47000E65315 /* UIImageView+load.swift */; };
 		38D6733C27AED51F00E65315 /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D6733B27AED51F00E65315 /* String+Localized.swift */; };
-		38D6733E27AED69D00E65315 /* String+Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D6733D27AED69D00E65315 /* String+Empty.swift */; };
+		38D6733E27AED69D00E65315 /* Operation+Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D6733D27AED69D00E65315 /* Operation+Empty.swift */; };
 		38D6734227AEF1D500E65315 /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D6734127AEF1D500E65315 /* SearchController.swift */; };
 		38D6734427AEF24900E65315 /* NavigationBarAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D6734327AEF24900E65315 /* NavigationBarAppearance.swift */; };
 		38D6734627AF1B0D00E65315 /* HomeSearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D6734527AF1B0D00E65315 /* HomeSearchPresenter.swift */; };
@@ -77,6 +77,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3850FAA127B4686C004135C5 /* UIApplication+TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+TopViewController.swift"; sourceTree = "<group>"; };
 		3856E43927AB254900EF954F /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
 		3856E44227AB2B7200EF954F /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		3856E44427AB2F8A00EF954F /* CharacterDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDTO.swift; sourceTree = "<group>"; };
@@ -94,10 +95,9 @@
 		38D6732527AEBF8400E65315 /* BetterCallSaulCharacters.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BetterCallSaulCharacters.json; sourceTree = "<group>"; };
 		38D6732727AEBFCF00E65315 /* BreakingBadCharacters.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BreakingBadCharacters.json; sourceTree = "<group>"; };
 		38D6732E27AED0C200E65315 /* HomeSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSearchTableViewCell.swift; sourceTree = "<group>"; };
-		38D6733427AED2D300E65315 /* UIView+fill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+fill.swift"; sourceTree = "<group>"; };
 		38D6733927AED47000E65315 /* UIImageView+load.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+load.swift"; sourceTree = "<group>"; };
 		38D6733B27AED51F00E65315 /* String+Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
-		38D6733D27AED69D00E65315 /* String+Empty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Empty.swift"; sourceTree = "<group>"; };
+		38D6733D27AED69D00E65315 /* Operation+Empty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Operation+Empty.swift"; sourceTree = "<group>"; };
 		38D6734127AEF1D500E65315 /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
 		38D6734327AEF24900E65315 /* NavigationBarAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarAppearance.swift; sourceTree = "<group>"; };
 		38D6734527AF1B0D00E65315 /* HomeSearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSearchPresenter.swift; sourceTree = "<group>"; };
@@ -255,11 +255,11 @@
 		38D6733327AED2BE00E65315 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				38D6733427AED2D300E65315 /* UIView+fill.swift */,
 				38D6733927AED47000E65315 /* UIImageView+load.swift */,
 				38D6733B27AED51F00E65315 /* String+Localized.swift */,
-				38D6733D27AED69D00E65315 /* String+Empty.swift */,
+				38D6733D27AED69D00E65315 /* Operation+Empty.swift */,
 				38B7BCDC27B31CAC00A2FEDA /* Realm+Array.swift */,
+				3850FAA127B4686C004135C5 /* UIApplication+TopViewController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -584,13 +584,12 @@
 				38D6735B27AFB4CB00E65315 /* SearchDetailQuotesRepository.swift in Sources */,
 				38B7BCD227B1930A00A2FEDA /* RealmManager.swift in Sources */,
 				38D6735D27AFB59F00E65315 /* SearchDetailQuotesUseCase.swift in Sources */,
-				38D6733E27AED69D00E65315 /* String+Empty.swift in Sources */,
+				38D6733E27AED69D00E65315 /* Operation+Empty.swift in Sources */,
 				38D6734627AF1B0D00E65315 /* HomeSearchPresenter.swift in Sources */,
 				3856E46227ADBEDF00EF954F /* HomeSearchTableViewController.swift in Sources */,
 				38D6735727AFB3AB00E65315 /* QuoteDTO.swift in Sources */,
 				3856E45327ADB4F100EF954F /* HomeSearchUseCase.swift in Sources */,
 				8C217B7127AAE527005E389F /* SceneDelegate.swift in Sources */,
-				38D6733527AED2D300E65315 /* UIView+fill.swift in Sources */,
 				3856E44A27ADB08300EF954F /* SearchCategory.swift in Sources */,
 				38B7BCD827B194B700A2FEDA /* CharacterRealm.swift in Sources */,
 				3856E45E27ADBA7000EF954F /* HomeSearchRouter.swift in Sources */,
@@ -607,6 +606,7 @@
 				38D6734F27AF281D00E65315 /* SearchDetailPresenter.swift in Sources */,
 				3856E45127ADB36600EF954F /* HomeSearchRepository.swift in Sources */,
 				38B7BCDD27B31CAC00A2FEDA /* Realm+Array.swift in Sources */,
+				3850FAA227B4686C004135C5 /* UIApplication+TopViewController.swift in Sources */,
 				38D6736727AFE47900E65315 /* HeaderDetailView.swift in Sources */,
 				38D6735927AFB41900E65315 /* Quote.swift in Sources */,
 				38D6735127AF28AD00E65315 /* SearchDetailTableViewController.swift in Sources */,

@@ -55,15 +55,12 @@ class SearchDetailTableViewController: UITableViewController {
 
 extension SearchDetailTableViewController: SearchDetailTableViewControllerProtocol {
     func setupUI() {
-        navigationController?.title = "Detail"
-        navigationController?.navigationBar.prefersLargeTitles = false
-        let headerView = HeaderDetailView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 250))
         let model = presenter.headerModel()
-        
-        let backgroundImage: UIImage? = presenter.getCategory() == .BetterCallSaul ? UIImage(named: "ic_bettercallsaul") : UIImage(named: "ic_breakingbad")
-        
+        let backgroundImage: UIImage? = UIImage(named: presenter.categoryStringImage)
+        let headerView = HeaderDetailView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 250))
         headerView.display(with: model, backgroundImage: backgroundImage)
         tableView.tableHeaderView = headerView
+        navigationController?.navigationBar.prefersLargeTitles = false
     }
     
     func reloadView() {

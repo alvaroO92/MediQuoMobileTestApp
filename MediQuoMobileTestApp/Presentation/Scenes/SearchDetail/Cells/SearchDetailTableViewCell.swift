@@ -32,13 +32,21 @@ class SearchDetailTableViewCell: UITableViewCell {
         let label = UILabel()
         label.numberOfLines = 0
         label.font = UIFont.boldSystemFont(ofSize: 16)
+        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        contentView.fill(with: messageLabel, edges: .init(top: 10, left: 10, bottom: 10, right: 10))
         selectionStyle = .none
+        contentView.addSubview(messageLabel)
+        NSLayoutConstraint.activate([
+            messageLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
+            messageLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
+            messageLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10),
+            messageLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10)
+            
+        ])
     }
     
     required init?(coder: NSCoder) {
