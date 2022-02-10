@@ -24,6 +24,15 @@ final class HomeSearchTableViewController: UITableViewController {
         return segmentedControl
     }()
 
+    lazy var searchController: UISearchController = {
+        let searchController = UISearchController(searchResultsController: nil)
+        searchController.searchBar.placeholder = "search".localized()
+        searchController.searchBar.searchBarStyle = .minimal
+        searchController.definesPresentationContext = true
+        searchController.searchResultsUpdater = self
+        return searchController
+    }()
+
     var presenter: HomeSearchPresenterProtocol
     
     init(presenter: HomeSearchPresenterProtocol) {
@@ -97,8 +106,6 @@ extension HomeSearchTableViewController: HomeSearchTableViewControllerProtocol {
     
     func setupUI() {
         title = "characters".localized()
-        let searchController = NavigationBarAppearance.shared.setupSearchController(placeholder: "search".localized())
-        searchController.searchResultsUpdater = self
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
         navigationController?.navigationBar.prefersLargeTitles = true
@@ -106,6 +113,8 @@ extension HomeSearchTableViewController: HomeSearchTableViewControllerProtocol {
 
     func showErrorView(message: String) {
         let alert = UIAlertController.init(title: "error".localized(), message: message, preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "ok".localized(), style: .cancel, handler: nil)
+        alert.addAction(cancelAction)
         present(alert, animated: true, completion: nil)
     }
 }

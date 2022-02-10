@@ -14,12 +14,11 @@ final class NavigationBarAppearance {
     private init() {}
 
     public func setupSearchController(placeholder: String?) -> UISearchController {
-        let searchController = SearchController(searchResultsController: nil)
-        searchController.obscuresBackgroundDuringPresentation = false
-        let searchBar = searchController.customSearchbar
-        searchBar.placeholder = placeholder
-       // setupStyle(searchBar: searchBar, type: type)
-        return searchController
+        let searchController = UISearchController(searchResultsController: nil)
+          searchController.searchBar.placeholder = placeholder
+          searchController.searchBar.searchBarStyle = .minimal
+          searchController.definesPresentationContext = true
+         return searchController
     }
 
 }

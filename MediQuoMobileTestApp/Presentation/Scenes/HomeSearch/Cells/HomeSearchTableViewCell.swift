@@ -32,24 +32,22 @@ class HomeSearchTableViewCell: UITableViewCell {
     let characterImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.clipsToBounds = true
-        NSLayoutConstraint.activate([
-            imageView.heightAnchor.constraint(equalToConstant: 100),
-            imageView.widthAnchor.constraint(equalToConstant: 100)
-        ])
+        imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
 
     lazy var textsStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [nameLabel, nickNameLabel])
-        stackView.axis = .horizontal
-        stackView.alignment = .center
-        stackView.spacing = 4.0
+        stackView.axis = .vertical
+        stackView.alignment = .leading
+        stackView.spacing = 1.0
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
     
     let nameLabel: UILabel = {
         let label = UILabel()
+        label.numberOfLines = 2
         label.setContentHuggingPriority(.defaultHigh, for: .horizontal)
         label.font = UIFont.boldSystemFont(ofSize: 16)
         return label
@@ -64,7 +62,21 @@ class HomeSearchTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.selectionStyle = .none
-        contentView.fill(with: contentStackView)
+        
+        contentView.addSubview(characterImageView)
+        NSLayoutConstraint.activate([
+            characterImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
+            characterImageView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+            characterImageView.heightAnchor.constraint(equalToConstant: 60),
+            characterImageView.widthAnchor.constraint(equalToConstant: 60)
+        ])
+        
+        contentView.addSubview(textsStackView)
+        NSLayoutConstraint.activate([
+            textsStackView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+            textsStackView.leadingAnchor.constraint(equalTo: characterImageView.trailingAnchor, constant: 16),
+            textsStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 16)
+        ])
     }
     
     required init?(coder: NSCoder) {

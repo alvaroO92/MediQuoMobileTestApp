@@ -3,6 +3,8 @@
 //  MediQuoMobileTestApp
 //
 //  Created by Alvaro Orti Moreno on 5/2/22.
+//  Copyright © 2022 Alvaro Orti Moreno. All rights reserved.
+
 //
 
 import Foundation
@@ -28,6 +30,8 @@ final class HomeSearchPresenter {
     var category: SearchCategory = .BetterCallSaul
     var characters = [Character]()
     var filterCharacters = [Character]()
+    
+    var isSearching: Bool = false
 
     init(useCase: HomeSearchUseCaseProtocol, router: HomeSearchRouterProtocol) {
         self.useCase = useCase
@@ -39,6 +43,7 @@ final class HomeSearchPresenter {
             switch response {
             case .success(let characters):
                 self.characters = characters
+                self.filterCharacters = characters
                 self.view?.reloadView()
             case .failure(let error):
                 self.view?.showErrorView(message: error.localizedDescription)
@@ -66,11 +71,7 @@ extension HomeSearchPresenter: HomeSearchPresenterProtocol {
     }
 
     func filter(by text: String) {
-        guard !text.isEmpty else {
-            filterCharacters.removeAll()
-            view?.reloadView()
-            return
-        }
+        isSearching = text.isNotEmpty
         filterCharacters = characters.filter { $0.name.hasPrefix(text) }
         view?.reloadView()
     }
@@ -80,20 +81,20 @@ extension HomeSearchPresenter: HomeSearchPresenterProtocol {
     }
     
     func numberOfRows(in section: Int) -> Int {
-        max(1, filterCharacters.isEmpty ? characters.count : filterCharacters.count)
+        max(1, isSearching ? filterCharacters.count : characters.count)
     }
 
     func modelForCell(at index: Int) -> HomeSearchTableViewCellUseCase {
-        guard characters.isNotEmpty() else {
+        guard characters.isNotEmpty && filterCharacters.isNotEmpty else {
             return HomeSearchTableViewCellUseCase.noResult("noResults".localized())
         }
 
-        let character = filterCharacters.isEmpty ? characters[index] : filterCharacters[index]
+        let character = isSearching ? filterCharacters[index] : characters[index]
         return HomeSearchTableViewCellUseCase.result(.init(image: character.image, name: character.name, nickName: character.nickname))
     }
 
     func goToDetail(for index: Int) {
-        let character = filterCharacters.isEmpty ? characters[index] : filterCharacters[index]
+        let character = isSearching ? filterCharacters[index] : characters[index]
         router.goToDetail(with: category, character: character)
     }
 }
