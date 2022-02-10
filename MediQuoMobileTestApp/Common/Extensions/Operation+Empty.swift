@@ -1,5 +1,5 @@
 //
-//  String+Empty.swift
+//  Operation+Empty.swift
 //  MediQuoMobileTestApp
 //
 //  Created by Alvaro Orti Moreno on 5/2/22.
@@ -9,7 +9,13 @@
 import Foundation
 
 extension Array {
-    func isNotEmpty() -> Bool {
+    var isNotEmpty: Bool {
+        !self.isEmpty
+    }
+}
+
+extension String {
+    var isNotEmpty: Bool {
         !self.isEmpty
     }
 }
